@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>TAGWORLD — Graffiti & the SDGs | Southeast Asia Street Art</title>
+<meta name="description" content="Create digital graffiti tags, explore Southeast Asian street art culture, and discover how graffiti connects to the UN Sustainable Development Goals."/>
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker-wrap" role="marquee">
+  <div class="ticker-content">
+    <span>★ TAGWORLD</span><span>✦ GRAFFITI + SDGs</span><span>★ SDG 11: SUSTAINABLE CITIES</span>
+    <span>✦ SDG 12: RESPONSIBLE PRODUCTION</span><span>★ CONFLICT X — MALANG CITY, INDONESIA</span>
+    <span>✦ CREATE YOUR TAG NOW</span><span>★ SOUTHEAST ASIA STREET ART</span>
+    <span>✦ PILIPINAS · INDONESIA · JAPAN</span><span>★ DIY CULTURE · HIP HOP · URBAN ART</span>
+    <span>✦ TAGWORLD — WE WRITE OUR OWN STORY</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">✦ TAGWORLD</a>
+  <ul class="nav-links">
+    <li><a href="#tag-tool" id="nav-tool">CREATE TAG</a></li>
+    <li><a href="#artists" id="nav-artists">ARTISTS</a></li>
+    <li><a href="#sdgs" id="nav-sdgs">SDGs</a></li>
+    <li><a href="#gallery" id="nav-gallery">GALLERY</a></li>
+    <li><a href="pages/about.html" id="nav-about">ABOUT</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div id="floating-tags-bg" style="position:absolute;inset:0;overflow:hidden;pointer-events:none;"></div>
+  <img src="assets/hero_banner.png" alt="TAGWORLD — Graffiti & SDGs" class="hero-banner-img"/>
+  <p class="hero-subtitle">[ GRAFFITI · CULTURE · SUSTAINABILITY ]</p>
+  <p class="hero-tagline">Where Southeast Asian street art meets<br/>the UN Sustainable Development Goals.</p>
+  <div class="hero-buttons">
+    <a href="#tag-tool" class="btn btn-pink" id="hero-create-btn">🎨 CREATE YOUR TAG</a>
+    <a href="#artists" class="btn btn-yellow" id="hero-artists-btn">👁 MEET THE ARTISTS</a>
+    <a href="#sdgs" class="btn btn-cyan" id="hero-sdg-btn">🌏 EXPLORE SDGs</a>
+  </div>
+  <p style="margin-top:40px;font-family:'VT323',monospace;font-size:20px;color:#bf00ff;letter-spacing:3px;" class="blink">▼ SCROLL DOWN ▼</p>
+</section>
+
+<hr class="section-divider"/>
+
+<!-- FEATURES -->
+<section class="section" id="features" style="background:rgba(0,0,0,0.4);">
+  <h2 class="section-title" style="color:#ffe600;" data-text="WHAT IS TAGWORLD?" >
+    <span class="glitch" data-text="WHAT IS TAGWORLD?">WHAT IS TAGWORLD?</span>
+  </h2>
+  <p class="section-subtitle">// A DIGITAL STREET ART PLATFORM //</p>
+  <div class="features-grid">
+    <div class="feature-card">
+      <span class="feature-icon">🎨</span>
+      <h3>Custom Tag Tool</h3>
+      <p>Spray, brush, drip — paint your graffiti tag digitally using tools that mimic real street art techniques. Save and share to the community gallery.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">🧑‍🎨</span>
+      <h3>Artist Profiles</h3>
+      <p>Video interviews and profiles of graffiti artists from the Philippines, Indonesia, and across Southeast Asia. Stories of culture, rebellion, and community.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">🌏</span>
+      <h3>SDG Connection</h3>
+      <p>Explore how graffiti ties directly into SDG 11 (Sustainable Cities) and SDG 12 (Responsible Production) through art, activism, and DIY culture.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">🤝</span>
+      <h3>Cultural Exchange</h3>
+      <p>A platform bridging street art communities across Southeast Asia — from Malang City to Manila, connecting artists and audiences in a shared visual language.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider"/>
+
+<!-- TAG TOOL -->
+<section class="section" id="tag-tool">
+  <h2 class="section-title" style="color:#ff2d78;">
+    <span class="glitch" data-text="CREATE YOUR TAG">CREATE YOUR TAG</span>
+  </h2>
+  <p class="section-subtitle">// DIGITAL SPRAY CAN — MAKE YOUR MARK //</p>
+  <div class="tag-tool-wrap">
+    <!-- Controls Row 1: Tools -->
+    <div class="tool-controls" style="margin-bottom:14px;">
+      <span class="tool-label">TOOL:</span>
+      <button class="tool-btn" data-tool="spray" id="tool-spray">💨 SPRAY</button>
+      <button class="tool-btn" data-tool="brush" id="tool-brush">🖌 BRUSH</button>
+      <button class="tool-btn" data-tool="drip" id="tool-drip">💧 DRIP</button>
+      <button class="tool-btn" data-tool="eraser" id="tool-eraser">🧹 ERASE</button>
+    </div>
+    <!-- Controls Row 2: Colors -->
+    <div class="tool-controls" style="margin-bottom:14px;">
+      <span class="tool-label">COLOR:</span>
+      <div class="color-swatch" data-color="#ff2d78" style="background:#ff2d78;" title="Hot Pink" id="swatch-pink"></div>
+      <div class="color-swatch" data-color="#ffe600" style="background:#ffe600;" title="Electric Yellow" id="swatch-yellow"></div>
+      <div class="color-swatch" data-color="#00fff7" style="background:#00fff7;" title="Cyber Cyan" id="swatch-cyan"></div>
+      <div class="color-swatch" data-color="#bf00ff" style="background:#bf00ff;" title="Neon Purple" id="swatch-purple"></div>
+      <div class="color-swatch" data-color="#39ff14" style="background:#39ff14;" title="Acid Green" id="swatch-green"></div>
+      <div class="color-swatch" data-color="#ff6600" style="background:#ff6600;" title="Orange" id="swatch-orange"></div>
+      <div class="color-swatch" data-color="#ffffff" style="background:#ffffff;" title="White" id="swatch-white"></div>
+      <input type="color" id="custom-color" value="#ff2d78" title="Custom Color" style="width:32px;height:32px;border:3px solid #bf00ff;cursor:pointer;padding:0;background:none;"/>
+    </div>
+    <!-- Controls Row 3: Size -->
+    <div class="tool-controls" style="margin-bottom:20px;">
+      <span class="tool-label">SIZE:</span>
+      <input type="range" id="brush-size" class="size-slider" min="4" max="60" value="18"/>
+      <span class="tool-label" id="size-label">18px</span>
+    </div>
+    <!-- Canvas -->
+    <div class="canvas-container">
+      <canvas id="graffiti-canvas" width="800" height="480" aria-label="Graffiti drawing canvas"></canvas>
+    </div>
+    <!-- Action buttons -->
+    <div class="tool-controls" style="margin-top:20px;">
+      <button class="tool-btn" id="clear-canvas">🗑 CLEAR</button>
+      <button class="tool-btn" id="save-tag">💾 SAVE TAG</button>
+      <button class="tool-btn" id="download-tag">⬇ DOWNLOAD</button>
+    </div>
+    <!-- Tag of week -->
+    <div style="margin-top:50px;">
+      <h3 style="font-family:'Permanent Marker',cursive;font-size:28px;color:#ffe600;text-shadow:2px 2px 0 #ff2d78;margin-bottom:16px;">⭐ TAG OF THE WEEK</h3>
+      <div id="tag-of-week" style="max-width:400px;margin:0 auto;border:3px solid #ffe600;padding:10px;background:rgba(0,0,0,0.5);"></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider"/>
+
+<!-- ARTISTS -->
+<section class="section" id="artists" style="background:rgba(0,0,0,0.5);">
+  <h2 class="section-title" style="color:#00fff7;">
+    <span class="glitch" data-text="THE ARTISTS">THE ARTISTS</span>
+  </h2>
+  <p class="section-subtitle">// SOUTHEAST ASIA'S GRAFFITI VOICES //</p>
+  <div class="artists-grid">
+
+    <!-- Conflict X -->
+    <div class="artist-card" id="artist-conflict-x">
+      <img src="assets/conflict_x_artist.png" alt="Conflict X — Malang City, Indonesia" class="artist-card-img"/>
+      <div class="artist-card-body">
+        <p class="artist-tag">MALANG CITY, EAST JAVA, INDONESIA</p>
+        <h3>Conflict X</h3>
+        <p>A pioneering graffiti collective from Malang City, East Java, whose work draws from hip-hop, urban resilience, and the visual identity of Indonesian youth. Their murals transform neglected walls into celebrations of regional pride and community expression.</p>
+        <div class="sdg-badges">
+          <span class="sdg-badge">SDG 11</span>
+          <span class="sdg-badge">SDG 12</span>
+          <span class="sdg-badge">DIY CULTURE</span>
+          <span class="sdg-badge">HIP HOP</span>
+        </div>
+        <br/>
+        <a href="pages/conflict-x.html" class="btn btn-pink" id="btn-conflict-x" style="font-size:8px;padding:10px 16px;">VIEW PROFILE →</a>
+      </div>
+    </div>
+
+    <!-- Dakara -->
+    <div class="artist-card" id="artist-dakara">
+      <img src="assets/conflict_x_artist.png" alt="Dakara — East Java" class="artist-card-img" style="filter:hue-rotate(60deg) saturate(1.3);"/>
+      <div class="artist-card-body">
+        <p class="artist-tag">EAST JAVA, INDONESIA</p>
+        <h3>Dakara</h3>
+        <p>Member of Conflict X, Dakara uses graffiti as a lens to represent Malang City and East Java. His work positions street art as a form of regional identity — turning walls into living maps of where people come from and who they are.</p>
+        <div class="sdg-badges">
+          <span class="sdg-badge">SDG 11</span>
+          <span class="sdg-badge">URBAN IDENTITY</span>
+          <span class="sdg-badge">MALANG CITY</span>
+        </div>
+        <br/>
+        <a href="pages/dakara.html" class="btn btn-cyan" id="btn-dakara" style="font-size:8px;padding:10px 16px;">VIEW PROFILE →</a>
+      </div>
+    </div>
+
+    <!-- Sweet UTX -->
+    <div class="artist-card" id="artist-sweet-utx">
+      <img src="assets/conflict_x_artist.png" alt="Sweet UTX" class="artist-card-img" style="filter:hue-rotate(180deg) saturate(1.4);"/>
+      <div class="artist-card-body">
+        <p class="artist-tag">SOUTHEAST ASIA</p>
+        <h3>Sweet UTX</h3>
+        <p>Known for discussing the sustainable side of graffiti — leftover spray cans, recycled surfaces, and the eco-efficient nature of DIY art. Sweet UTX bridges graffiti with conversations about resource use and responsible creative production.</p>
+        <div class="sdg-badges">
+          <span class="sdg-badge">SDG 12</span>
+          <span class="sdg-badge">SUSTAINABLE ART</span>
+          <span class="sdg-badge">ECO-FRIENDLY</span>
+        </div>
+        <br/>
+        <a href="pages/sweet-utx.html" class="btn btn-yellow" id="btn-sweet-utx" style="font-size:8px;padding:10px 16px;">VIEW PROFILE →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-divider"/>
+
+<!-- SDGs -->
+<section class="section sdg-section" id="sdgs">
+  <h2 class="section-title" style="color:#39ff14;">
+    <span class="glitch" data-text="GRAFFITI + SDGs">GRAFFITI + SDGs</span>
+  </h2>
+  <p class="section-subtitle">// ART AS A FORCE FOR SUSTAINABLE CHANGE //</p>
+  <img src="assets/sdg_icons.png" alt="SDG 11 and SDG 12 graffiti icons" style="display:block;max-width:600px;width:90%;margin:0 auto 50px;border:4px solid #39ff14;box-shadow:0 0 30px rgba(57,255,20,0.3);"/>
+  <div class="sdg-cards">
+
+    <div class="sdg-card sdg-card-11" id="sdg-11-card">
+      <div class="pixel-corner pixel-corner-tl"></div>
+      <div class="pixel-corner pixel-corner-br"></div>
+      <div class="sdg-number">11</div>
+      <h3>Sustainable Cities &amp; Communities</h3>
+      <p>Graffiti is a form of inclusive urban culture — giving youth, marginalized communities, and local artists a voice in shaping how their city looks and feels.</p>
+      <ul>
+        <li>Revitalizes neglected public spaces</li>
+        <li>Celebrates local and regional identity</li>
+        <li>Connects youth to urban belonging</li>
+        <li>Example: Conflict X transforms Malang City walls into community landmarks</li>
+      </ul>
+    </div>
+
+    <div class="sdg-card sdg-card-12" id="sdg-12-card">
+      <div class="pixel-corner pixel-corner-tl" style="background:#39ff14;"></div>
+      <div class="pixel-corner pixel-corner-br" style="background:#39ff14;"></div>
+      <div class="sdg-number" style="color:#39ff14;text-shadow:0 0 20px #39ff14;">12</div>
+      <h3>Responsible Consumption &amp; Production</h3>
+      <p>Graffiti art is a low-resource, high-impact creative form — rooted in DIY culture, recycled materials, and small-batch production rather than industrial output.</p>
+      <ul>
+        <li>Reuses leftover and recycled spray cans</li>
+        <li>DIY tools reduce industrial waste</li>
+        <li>Supports localized, small-scale art economies</li>
+        <li>Example: Sweet UTX on eco-friendly graffiti practices</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-divider"/>
+
+<!-- COMMUNITY GALLERY -->
+<section class="section" id="gallery">
+  <h2 class="section-title" style="color:#bf00ff;">
+    <span class="glitch" data-text="COMMUNITY GALLERY">COMMUNITY GALLERY</span>
+  </h2>
+  <p class="section-subtitle">// YOUR TAGS, YOUR WALLS //</p>
+  <div id="gallery-grid" class="gallery-grid">
+    <p style="font-family:'VT323',monospace;font-size:22px;color:#bf00ff;text-align:center;grid-column:1/-1;">CREATE &amp; SAVE A TAG ABOVE TO ADD IT HERE!</p>
+  </div>
+</section>
+
+<hr class="section-divider"/>
+
+<!-- COLLABORATIVE MURAL CTA -->
+<section class="section" style="text-align:center;background:linear-gradient(135deg,rgba(45,0,87,0.6),rgba(10,0,16,0.9));">
+  <h2 class="section-title" style="color:#ffe600;">JOIN THE MURAL</h2>
+  <p class="section-subtitle">// A COLLABORATIVE WALL THAT NEVER ENDS //</p>
+  <p style="font-size:18px;max-width:600px;margin:0 auto 30px;line-height:1.9;opacity:0.9;">
+    Every tag you create becomes part of something bigger. The TAGWORLD Collaborative Mural grows with every artist — from Manila to Malang, from your screen to the street.
+  </p>
+  <a href="#tag-tool" class="btn btn-pink" id="cta-create-btn" style="font-size:11px;padding:16px 30px;">🎨 START CREATING NOW</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">✦ TAGWORLD ✦</div>
+  <p>GRAFFITI · CULTURE · SUSTAINABILITY · SOUTHEAST ASIA</p>
+  <p style="margin-top:8px;font-size:15px;opacity:0.7;">A web platform exploring street art and the UN SDGs</p>
+  <p style="margin-top:8px;font-size:15px;opacity:0.6;">Featuring: <strong style="color:#ffe600;">Conflict X</strong> · Malang City, East Java, Indonesia</p>
+  <div class="footer-links">
+    <a href="#home" id="footer-home">HOME</a>
+    <a href="#tag-tool" id="footer-tool">CREATE TAG</a>
+    <a href="#artists" id="footer-artists">ARTISTS</a>
+    <a href="#sdgs" id="footer-sdgs">SDGs</a>
+    <a href="#gallery" id="footer-gallery">GALLERY</a>
+    <a href="pages/about.html" id="footer-about">ABOUT</a>
+  </div>
+  <p style="margin-top:24px;font-family:'Press Start 2P',monospace;font-size:7px;color:#bf00ff;letter-spacing:2px;">
+    MADE WITH 💜 &amp; SPRAY PAINT · © 2025 TAGWORLD
+  </p>
+</footer>
+
+<script src="js/graffiti.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
